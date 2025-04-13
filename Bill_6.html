@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to calculate electricity bill
+function calculateElectricityBill(unitConsumed, unitRate, sanctionLoad, fixedChargeRate, electricityDuty) {
+    // Calculate Energy Charge (EC)
+    let energyCharge = unitConsumed * unitRate;
+
+    // Calculate Fixed Charge (FC)
+    let fixedCharge = sanctionLoad * fixedChargeRate;
+
+    // Calculate Total Electricity Bill
+    let totalBill = energyCharge + fixedCharge + electricityDuty;
+
+    // Output the results
+    document.write("Electricity Bill Details: <br><br>");
+    document.write("Energy Charge (EC): " + energyCharge+"<br>");
+    document.write("Fixed Charge (FC): " + fixedCharge+"<br>");
+    document.write("Electricity Duty: " + electricityDuty+"<br>");
+    document.write("Total Electricity Bill: " + totalBill+"<br>");
+}
+
+// Example Input Values
+let unitConsumed = 300; // Units consumed by the user
+let unitRate = 6; // Rate per unit (in currency units)
+let sanctionLoad = 15; // Sanction load (in kW)
+let fixedChargeRate = 75; // Fixed charge rate per kW (in currency units)
+let electricityDuty = 50; // Electricity duty (in currency units)
+
+// Call the function to calculate and print the bill
+calculateElectricityBill(unitConsumed, unitRate, sanctionLoad, fixedChargeRate, electricityDuty);
+
+    </script>
+</body>
+</html>

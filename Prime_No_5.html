@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function to check if a number is prime
+function isPrime(num) {
+    if (num <= 1) {
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+// Print prime numbers between 1 and 100
+console.log("Prime numbers between 1 and 100:");
+for (let i = 1; i <= 100; i++) {
+    if (isPrime(i)) {
+        document.write(i,"<br>");
+    }
+}
+
+    </script>
+</body>
+</html>
